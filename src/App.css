@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.App-footer{
+  height: 55vh;
+  background-color: black;
+}
