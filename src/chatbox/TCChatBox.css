@@ -1,6 +1,7 @@
 .chat{
     height: 100vh;
-    display: grid;
+    width: 100vw;
+    display: flex;
     grid-template-columns: 20vw 1fr 25vw;
 }
 /* 
@@ -8,51 +9,104 @@
     font-size:1.5em !important;
 } */
 
+
 .chat p, h1, h2, h3, h4, h5{
     font-family: Arial !important;
 }
 
+.chat-nav{
+    width:17vw;
+    background-color: #1D3767;
+}
+
 .chat-contact{
-    background-color:papayawhip;
+    width: 13vw;
+    background-color:#F9F9F9;
+    /* background-color: blueviolet; */
     padding: 2vh 0.5rem;
+    border-right: #E3E3E3 1px solid;
     
+}
+
+.chat-contactSearch div{
+   width: 80% ;
+   margin: 1vh;
+
 }
 
 .chat-contactCard{
     /* border:slategray 1px solid; */
     background-color: snow;
-    margin: 10px 20px 10px 20px  !important;
-    padding:10px !important;
+    margin: 5px  !important;
+    padding:5px !important;
     border-radius:15px ; 
-    box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .chat-box{
-    background-color: lightpink;
+    /* background-color:cadetblue; */
+    width: 50vw;
 }
+
+
 
 .chat-boxHeader{
-    display:flex;
+    display:grid;
+    grid-template-columns: 20% 1fr 5%;
+    align-items: center;
     background-color: snow;
     height: 10vh;
+    border-bottom: #E3E3E3 1px solid;
 }
 
+
+.chat-boxHeader p {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.chat-boxHeader i {
+    color: #1D3767; 
+}
+
+
 .chat-boxContent{
-    background-color: teal;
-    height: 80vh;
+    /* background-color: teal; */
+    height: 80%;
+    border-top: #E3E3E3 1px solid;
+    border-bottom: #E3E3E3 1px solid;
 }
 
 .chat-boxInput{
+    border: #E3E3E3 1px solid;
     display:flex;
+    align-items: center;
+    height: 10vh;
+}
+
+.chat-boxInput div{
+    /* background-color: #F5F5F5; */
+
+    width: 85%;
+    height: 40%;
+    margin-left: 5%;
+
 }
 
 
+.chat-boxInput i {
+    color: #1D3767; 
+}
 
 .chat-detail{
-    background-color: lightsteelblue;
+    background-color: #EDEFF2;
+    width: 20vw;
 }
 .chat-detailBar{
     display:flex;
+    justify-content: space-around;
+    margin-right: 1vw;
+
 }
 
 .chat-detailSpace{
@@ -61,3 +115,107 @@
 }
 
 
+.chat-detailBar.Button{
+    background-color: red;
+}
+
+
+
+
+
+
+.chat-detail .ui.card{
+    margin: 2vh 0 0 0;
+}
+
+
+/* this part for top right user tool componenet */
+/* systle for  Add Icon */
+.chat-detailBar button.ui.button{
+    background-color: #0DB269;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 12px;
+    padding-top: 8px;
+    border-radius: 30%;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 8px, rgba(0, 0, 0, 0.28) 0px 5px 8px;
+
+}
+
+/* systle for  add Icon */
+.chat-detailBar button.ui.button:hover{
+    background-color: green;
+  }
+
+/* systle for  search Icon */
+.chat-detailBar .search.icon{
+    margin-top: 18px;
+}
+
+/* systle for  bell Icon */
+.chat-detailBar .bell.icon{
+    margin-top: 16px;
+}
+
+
+/* systle for  angle Icon */
+.chat-detailBar .angle.icon{
+    margin-top: 16px;
+}
+
+.chat-detailBar div{
+    display:flex;
+}
+
+
+/* sytel for user info at chat page right side */
+.chat-userInfo .ui.image {
+    height: 15vh;
+}
+
+.ui.card.chat-userInfo > .content > .header:not(.ui){
+    margin-top: 2vh ;
+}
+
+
+.chat-detail .ui.card, .ui.cards > .card{
+    background:#EDEFF2;
+    box-shadow:0 0;
+}
+
+
+/* systel for user info button */
+.chat-detail > button {
+    background-color: #1D3767;
+}
+.chat-detail .ui.primary.button{
+    background-color:white;
+    color: #1D3767;
+    border-radius: 20px;
+}
+
+
+.chat-detail .ui.divider:not(.vertical):not(.horizontal){
+    width: 80%;
+    margin: 2vh auto;
+   
+}
+
+
+
+.chat-detailSpace{
+    background:#EDEFF2;
+}
+
+
+.chat-detail .ui.grid{
+    margin: 0;
+}
+
+
+.chat-detail .ui.primary.button{
+    font-size: 0.8vw;
+}
