@@ -4,10 +4,6 @@
     display: flex;
     grid-template-columns: 20vw 1fr 25vw;
 }
-/* 
-.chat h1, .chat h2, .chat h3, .chat h4 {
-    font-size:1.5em !important;
-} */
 
 
 .chat p, h1, h2, h3, h4, h5{
@@ -19,36 +15,59 @@
     background-color: #1D3767;
 }
 
+/* systle for  contact area */
 .chat-contact{
     width: 13vw;
     background-color:#F9F9F9;
-    /* background-color: blueviolet; */
     padding: 2vh 0.5rem;
-    border-right: #E3E3E3 1px solid;
-    
+    border-right: #E3E3E3 1px solid;  
+    overflow: scroll;
 }
 
+/* systle for  contact search bar */
 .chat-contactSearch div{
    width: 80% ;
    margin: 1vh;
 
 }
 
-.chat-contactCard{
-    /* border:slategray 1px solid; */
-    background-color: snow;
-    margin: 5px  !important;
-    padding:5px !important;
-    border-radius:15px ; 
-    box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+
+/* systle for  contact card - in contact */
+.chat-contactCardActive, 
+
+.chat-contactCardActive .content .header,
+.chat-contactCardActive .content .meta{
+    background-color:#1D3767 !important;
+    color: white !important;
+}
+.chat-contactCardActive .content .description {
+    font-size:smaller;
+    color: white !important;
+}
+.chat-contactCardActive .content .date {
+    float:right;
 }
 
+
+/* systle for  contact card - out off contact */
+.chat-contactCard .ui.card:last-child{
+    margin-bottom: 5px;
+}
+.chat-contactCard .content .date {
+    float:right;
+}
+.chat-contactCard .content .description {
+    font-size:smaller;
+}
+
+
+/* systle for  chat box */
+
 .chat-box{
-    /* background-color:cadetblue; */
     width: 50vw;
 }
 
-
+/* systle for  chat box header bar */
 
 .chat-boxHeader{
     display:grid;
@@ -59,6 +78,10 @@
     border-bottom: #E3E3E3 1px solid;
 }
 
+.chat-boxHeader header{
+    font-size:1.1rem;
+    font-weight: bold;
+}
 
 .chat-boxHeader p {
     margin-bottom: 0;
@@ -69,67 +92,46 @@
     color: #1D3767; 
 }
 
-
+/* systle for main chat box  */
 .chat-boxContent{
-    /* background-color: teal; */
     height: 80%;
     border-top: #E3E3E3 1px solid;
     border-bottom: #E3E3E3 1px solid;
 }
-
+/* systle for main chat box input area */
 .chat-boxInput{
     border: #E3E3E3 1px solid;
     display:flex;
     align-items: center;
     height: 10vh;
 }
-
 .chat-boxInput div{
-    /* background-color: #F5F5F5; */
-
     width: 85%;
     height: 40%;
     margin-left: 5%;
-
 }
-
-
 .chat-boxInput i {
     color: #1D3767; 
 }
 
+/* systle for talent detail  */
 .chat-detail{
     background-color: #EDEFF2;
     width: 20vw;
 }
+
+
+/* this part for top right user tool componenet */
 .chat-detailBar{
     display:flex;
     justify-content: space-around;
     margin-right: 1vw;
-
 }
 
-.chat-detailSpace{
-    height: 20vh;
-    background-color: cadetblue;
+.chat-detailBar div{
+    display:flex; 
 }
 
-
-.chat-detailBar.Button{
-    background-color: red;
-}
-
-
-
-
-
-
-.chat-detail .ui.card{
-    margin: 2vh 0 0 0;
-}
-
-
-/* this part for top right user tool componenet */
 /* systle for  Add Icon */
 .chat-detailBar button.ui.button{
     background-color: #0DB269;
@@ -166,12 +168,19 @@
     margin-top: 16px;
 }
 
-.chat-detailBar div{
-    display:flex;
-}
+
 
 
 /* sytel for user info at chat page right side */
+
+.chat-detailSpace{
+    height: 15vh;
+    background:#EDEFF2;
+}
+
+.chat-detail .ui.card{
+    margin: 2vh 0 0 0;
+}
 .chat-userInfo .ui.image {
     height: 15vh;
 }
@@ -188,13 +197,18 @@
 
 
 /* systel for user info button */
-.chat-detail > button {
-    background-color: #1D3767;
-}
-.chat-detail .ui.primary.button{
-    background-color:white;
-    color: #1D3767;
+
+.ui.primary.button{
     border-radius: 20px;
+}
+.chat-detail  .ui.primary.button{
+    background-color: #1D3767;
+    color: white;
+}
+
+.centered.row .ui.primary.button{
+    background-color: white;
+    color: black;
 }
 
 
@@ -203,13 +217,6 @@
     margin: 2vh auto;
    
 }
-
-
-
-.chat-detailSpace{
-    background:#EDEFF2;
-}
-
 
 .chat-detail .ui.grid{
     margin: 0;

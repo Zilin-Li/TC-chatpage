@@ -1,28 +1,27 @@
 import React from 'react';
 import './TCChatBox.css';
 import { AlinaImage, HankImage } from '../image/Image'
-import { Search, Grid, Image, Feed, Icon, Input, Button, Card, List, Item, } from 'semantic-ui-react'
+import { Search, Grid, Image, Feed, Icon, Input, Button, Card } from 'semantic-ui-react'
+
 
 const ContactCard = (props) => (
-    <Grid className={props.className || 'chat-contactCard'}>
-        <Grid.Row style={props.cardRowStyle}>
-            <Grid.Column width={3} style={props.imageStyle}>
-                <Image src={props.image} />
-            </Grid.Column>
-            <Grid.Column width={7} style={props.cardNameStyle} >
-                <Item.Content>
-                    <Item.Header as='a'>{props.header1}</Item.Header>
-                    <Item.Meta>{props.contactState}</Item.Meta>
-                </Item.Content>
-            </Grid.Column>
-            <Grid.Column width={6}>
-                <Feed.Date>{props.date}</Feed.Date>
-            </Grid.Column>
-        </Grid.Row>
-        <Grid.Row style={props.cardRowStyle}>
-            {props.description && <List style={props.dStyle} items={props.description} />}
-        </Grid.Row>
-    </Grid>
+ 
+        <Card className={props.className || 'chat-contactCard'}>
+            <Card.Content textAlign={props.textAlign || 'left'}>
+                <Image
+                    floated={props.floated || 'left'}
+                    size={props.imageSize || 'mini'}
+                    src={props.imgeSrc}
+                />     
+                <Feed.Date content={props.date ||'1 day ago'} />
+                <Card.Header>{props.contectName}</Card.Header>
+                <Card.Meta>{props.contectActive}</Card.Meta>
+                <Card.Description>
+                    {props.description}
+                </Card.Description>
+            </Card.Content>
+        </Card>
+
 )
 const UserTool = (props) => (
     <div className='chat-detailBar'>
@@ -53,17 +52,36 @@ export default function TCChatBox() {
                     value="Search names" />
 
                 <ContactCard
-                    image={AlinaImage}
-                    header1={'Hank'}
-                    contactState={'Active'}
-                    date={'2 days ago'}
+                    className="chat-contactCardActive"
+                    imgeSrc={AlinaImage}
+                    contectName={'Hank'}
+                    contectActive={'Active'}
+                    // date={'2 days ago'}
                     description={['10 years project management working experience in ICT industry...']}
-                    imageStyle={{ padding: '0' }}
-                    cardNameStyle={{ textAlign: 'left', magrinLeft: '1vw' }}
-                    feedStyle={{ textAlign: 'right', marginTop: '0' }}
-                    dStyle={{ textAlign: 'left' }}
-                    cardRowStyle={{ padding: '0 0 5px 0' }}
                 />
+                <ContactCard
+                    imgeSrc={HankImage}
+                    contectName={'Hank'}
+                    contectActive={'Active'}
+                    // date={'2 days ago'}
+                    description={['10 years project management working experience in ICT industry...']}
+                />
+                <ContactCard
+                    imgeSrc={HankImage}
+                    contectName={'Hank'}
+                    contectActive={'Active'}
+                    // date={'2 days ago'}
+                    description={['10 years project management working experience in ICT industry...']}
+                />
+                <ContactCard
+                    imgeSrc={HankImage}
+                    contectName={'Hank'}
+                    contectActive={'Active'}
+                    // date={'2 days ago'}
+                    description={['10 years project management working experience in ICT industry...']}
+                />
+
+
             </div>
             {/* chat-box */}
             <div className="chat-box">
